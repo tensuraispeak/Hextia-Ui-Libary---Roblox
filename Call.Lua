@@ -7,10 +7,9 @@ local Window = Hextia:CreateWindow("Hexstia Example UI", Vector2.new(450, 250))
 -- Create 'Controls' section
 local Controls = Window:CreateSection("Controls")
 
--- Add AutoSell button
+-- Add button
 Controls:AddButton("AutoSell", function()
-    print("AutoSell activated!")
-    -- Your autosell code here
+    -- your code here
 end)
 
 -- Add Info Label
