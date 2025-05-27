@@ -1,36 +1,32 @@
-# Hexstia - Roblox UI Library
+local Hextia = loadstring(game:HttpGet("https://pastebin.com/raw/jYD69UHg"))() -- this is how to call it
 
-Hexstia is a lightweight, customizable UI library for Roblox scripts, designed to be easy to use and integrate.
+-- Create a window
+local window = Hextia:CreateWindow("Example Window", Vector2.new(400, 300))
 
-## Features
-- Simple API for creating windows, buttons, toggles, sliders, and more
-- Modular and easy to extend
-- No dependencies or external themes required
-
-## Installation
-
-just call the libary
-
-## Usage
-
-```lua
--- Load Hexstia library
-local Hexstia = loadstring(game:HttpGet("https://pastebin.com/raw/jYD69UHg"))()
-
--- Create a new window
-local window = Hexstia:CreateWindow("My Script UI")
+-- Add a section
+local mainSection = window:CreateSection("Main Controls")
 
 -- Add a button
-local button = window:AddButton("Click Me", function()
+mainSection:AddButton("Click Me", function()
     print("Button clicked!")
 end)
 
 -- Add a toggle
-local toggle = window:AddToggle("Enable Feature", false, function(state)
-    print("Toggle state:", state)
+mainSection:AddToggle("Toggle Feature", false, function(state)
+    print("Toggle is now", state)
 end)
 
 -- Add a slider
-local slider = window:AddSlider("Adjust Value", 0, 100, 50, function(value)
+mainSection:AddSlider("Volume", 0, 100, 50, function(value)
     print("Slider value:", value)
+end)
+
+-- Add a textbox
+mainSection:AddTextbox("Name", "Player", function(text)
+    print("Entered text:", text)
+end)
+
+-- Add a dropdown
+mainSection:AddDropdown("Select Option", {"Option 1", "Option 2", "Option 3"}, function(selected)
+    print("Selected option:", selected)
 end)
