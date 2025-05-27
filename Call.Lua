@@ -1,5 +1,5 @@
 -- Load Hexstia
-local Hextia = loadstring(game:HttpGet("https://pastebin.com/raw/jYD69UHg"))()
+local Hextia = loadstring(game:HttpGet("https://pastebin.com/raw/ZyuGd8ie"))()
 
 -- Create main window
 local Window = Hextia:CreateWindow("Hexstia Example UI", Vector2.new(450, 250))
